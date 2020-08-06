@@ -1,0 +1,3 @@
+displayName = NauticaMod
+author = NauticaDevs
+version = 0.1
