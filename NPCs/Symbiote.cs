@@ -39,6 +39,10 @@ namespace NauticaMod.NPCs
             }
 
         }
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
+        {
+            return SpawnCondition.OceanMonster.Chance * 0.25f;
+        }
         
     }
 }
