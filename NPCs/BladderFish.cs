@@ -2,11 +2,14 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace NauticaMod.NPCs
 {
     public class BladderFish : ModNPC
     {       
+        Player player = Main.LocalPlayer;
+
         public override void SetStaticDefaults() 
         {
 			Main.npcFrameCount[npc.type] = 7;
@@ -39,6 +42,9 @@ namespace NauticaMod.NPCs
             }
 
         }
-        
+        public override float SpawnChance(NPCSpawnInfo spawnInfo) {
+			// we would like this npc to spawn in the overworld.
+			return spawnInfo.player.ZoneBeach ? SpawnCondition.OceanMonster.Chance * 0.3f : 0f;
+		}
     }
 }
