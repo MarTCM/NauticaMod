@@ -36,9 +36,10 @@ namespace NauticaMod.NPCs
 
         public override void NPCLoot()  //Npc drop
         {
-            {
-                //Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Starshark"), 1); //Item spawn
-            }
+            if (Main.rand.NextFloat() < .7500f)
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("BladderFish"), 1);
+                }
 
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
