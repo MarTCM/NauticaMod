@@ -6,7 +6,7 @@ using static Terraria.ModLoader.ModContent;
 
 namespace NauticaMod.NPCs
 {
-    public class BladderFish : ModNPC
+    public class Bladderfish : ModNPC
     {       
 
         public override void SetStaticDefaults() 
@@ -38,7 +38,7 @@ namespace NauticaMod.NPCs
         {
             if (Main.rand.NextFloat() < .7500f)
                 {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("BladderFish"), 1);
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Bladderfish"), 1);
                 }
 
         }

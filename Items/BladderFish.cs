@@ -5,7 +5,7 @@ using static Terraria.ModLoader.ModContent;
 
 namespace NauticaMod.Items 
 {
-	public class BladderFish : ModItem
+	public class Bladderfish : ModItem
 	{
 		public override void SetStaticDefaults() 
 		{
